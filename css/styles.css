@@ -774,12 +774,13 @@ image {
     cursor: pointer;
     text-align: center;
 
-
+    transition:  fill var(--time) var(--timing-function);
 }
 
 .icon-vector:hover, .icon-vector:focus {
     fill: var(--hover-focus-color);
 
+    transition:  fill var(--time) var(--timing-function);
 }
 
 .btn-vector {
@@ -792,13 +793,21 @@ image {
     margin-top: 8px;
     margin-right: 8px;
     margin-left: 490px;
+
+    transition:  color var(--time) var(--timing-function), border-color var(--time) var(--timing-function);
+
+    
 }
 
-.btn-vector:focus, .btn-vector.hover {
+.btn-vector:focus, .btn-vector:hover {
     color: var(--main-text-white-color);
     background-color: var(--main-text-white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+
+    transition:  color var(--time) var(--timing-function), border-color var(--time) var(--timing-function);
+
+
 }
 
 
