@@ -124,11 +124,16 @@ a {
     fill: currentColor;
     margin-right: 10px;
     cursor: pointer;
+
+    /*opacity: 0;
+    transition: opacity var(--time) var(--timing-function);*/
 }
 
 .icon-header:hover, 
 .icon-header:focus {
     fill: var(--hover-focus-color);
+
+    /*opacity: 1;*/
 }
 
 .icon-social-ul-add { 
@@ -210,7 +215,7 @@ a {
 }    
 
 .our-clients-icons-li {
-    color: var(--border-color-clients);
+    color: var(--border-color-clients);    
 }
 
 .icon-clients:hover,
@@ -390,6 +395,20 @@ a {
     margin: 0px;
     padding: 10px 32px;
 }  
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--main-text-white-color);
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
 
 .studio-list-li {
     width: 270px;
@@ -734,30 +753,21 @@ image {
     pointer-events: none;
 }
 
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    min-width: 528px;
-    min-height: 581px;
-    background-color: var(--main-text-white-color);
-    z-index: 1;
-    border-radius: 4px;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-}
-
 .icon-vector {
     position: relative;
-    display: block;
-    fill: red;
+    display: inline-block;
+    fill: var(--studio-logo-color);
 
     align-items: center;
     
     cursor: pointer;
     text-align: center;
 
+
+}
+
+.icon-vector:hover, .icon-vector:focus {
+    fill: var(--hover-focus-color);
 
 }
 
