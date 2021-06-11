@@ -74,7 +74,13 @@ a {
 .link-header-studio, .link-header-portfolio  {
     position: relative;
 	cursor: pointer;
+
+    transition: color var(--time) var(--timing-function);
 } 
+
+.link-header-contacts {
+    transition: color var(--time) var(--timing-function);
+}
 
 /*.link-header-studio:hover:after, 
 .link-header-studio:focus:after, */
@@ -129,15 +135,11 @@ a {
     margin-right: 10px;
     cursor: pointer;
 
-    /*opacity: 0;
-    transition: opacity var(--time) var(--timing-function);*/
 }
 
 .icon-header:hover, 
 .icon-header:focus {
     fill: var(--hover-focus-color);
-
-    /*opacity: 1;*/
 }
 
 .icon-social-ul-add { 
@@ -171,8 +173,6 @@ a {
     cursor: pointer;
 
     transition:  fill var(--time) var(--timing-function), background var(--time) var(--timing-function);
-
-
 }
 
 .our-clients-a {
@@ -311,7 +311,11 @@ a {
 
 .link-header-studio.current, .link-header-portfolio.current {
     color: var(--hover-focus-color);
+
+    transition: color var(--time) var(--timing-function);
 }
+
+
 
 .studio-logo-header {
     color: var(--studio-logo-color);
@@ -333,6 +337,8 @@ a {
     color: var(--main-text-color);    
     font-weight: 500;
     line-height: 1.17;
+
+    transition: color var(--time) var(--timing-function);
 }
 
 .link-header-studio:hover, 
@@ -350,6 +356,8 @@ a {
 .contacts-footer-mail:focus, 
 .contacts-footer-tel:focus {
     color: var(--hover-focus-color);
+
+    transition: color var(--time) var(--timing-function);
 }
 
 .link-header-contacts {
@@ -752,11 +760,10 @@ image {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
 
     opacity: 1;
     transition: opacity var(--time) var(--timing-function);
-
-
 }
 
 .backdrop.is-hidden {
@@ -794,9 +801,7 @@ image {
     margin-right: 8px;
     margin-left: 490px;
 
-    transition:  color var(--time) var(--timing-function), border-color var(--time) var(--timing-function);
-
-    
+    transition:  color var(--time) var(--timing-function), border-color var(--time) var(--timing-function);    
 }
 
 .btn-vector:focus, .btn-vector:hover {
@@ -806,8 +811,6 @@ image {
     border-radius: 50%;
 
     transition:  color var(--time) var(--timing-function), border-color var(--time) var(--timing-function);
-
-
 }
 
 
@@ -815,7 +818,6 @@ image {
 .photo {
     position: relative;
     overflow: hidden;
-
 }
 
 .photo::before {
@@ -827,20 +829,13 @@ image {
     top: 0;
     
     background-color: var(--bg-section-portfolio);  
-    /*opacity: 0; 
-    transition: opacity var(--time) var(--timing-function);*/
-
+ 
     transform: translateY(100%);
     transition: transform var(--time) var(--timing-function);
-
 }
 
 .photo:hover::before, .item:focus::before {
-    /*opacity: 1;*/
-
     transform: translateY(0);
-
-
 }
 
 .description-portfolio {
