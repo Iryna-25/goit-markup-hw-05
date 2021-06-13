@@ -838,7 +838,12 @@ image {
     transition: transform var(--time) var(--timing-function);
 }
 
+/*
 .photo:hover::before, .item:focus::before {
+    transform: translateY(0);
+} */
+
+.card:hover .photo::before {
     transform: translateY(0);
 }
 
@@ -866,6 +871,11 @@ image {
     transition: opacity var(--time) var(--timing-function);
 }
 
-.description-portfolio:hover, .description-portfolio:focus {
+/*.description-portfolio:hover, .description-portfolio:focus {
+    opacity: 1;
+}*/
+
+.card:focus .description-portfolio, 
+.card:hover .description-portfolio {
     opacity: 1;
 }
