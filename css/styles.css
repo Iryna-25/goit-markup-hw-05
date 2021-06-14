@@ -767,12 +767,15 @@ image {
     z-index: 1;
 
     opacity: 1;
-    transition: opacity var(--time) var(--timing-function);
+    transition: opacity var(--time) var(--timing-function), visibility var(--time) var(--timing-function);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
+
+    transition: visibility var(--time) var(--timing-function);
 }
 
 .icon-vector {
@@ -817,8 +820,6 @@ image {
     transition:  color var(--time) var(--timing-function), border-color var(--time) var(--timing-function);
 }
 
-
-
 .photo {
     position: relative;
     overflow: hidden;
@@ -838,12 +839,8 @@ image {
     transition: transform var(--time) var(--timing-function);
 }
 
-/*
-.photo:hover::before, .item:focus::before {
-    transform: translateY(0);
-} */
-
-.card:hover .photo::before {
+.card:hover .photo::before,
+.card:focus .photo::before {
     transform: translateY(0);
 }
 
@@ -870,10 +867,6 @@ image {
     opacity: 0; 
     transition: opacity var(--time) var(--timing-function);
 }
-
-/*.description-portfolio:hover, .description-portfolio:focus {
-    opacity: 1;
-}*/
 
 .card:focus .description-portfolio, 
 .card:hover .description-portfolio {
