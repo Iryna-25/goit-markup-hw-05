@@ -774,8 +774,6 @@ image {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-
-    transition: visibility var(--time) var(--timing-function);
 }
 
 .icon-vector {
